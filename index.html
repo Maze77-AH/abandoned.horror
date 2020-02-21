@@ -84,12 +84,10 @@ We here at Imagicast like to be honest and professional with eachother. We value
             $msg = '';
             
             if (isset($_POST['login']) && !empty($_POST['username']) 
-               && !empty($_POST['password'])) {
-				
+               && !empty($_POST['password'])) {		
                if $_POST['password'] == 'Yut2SK5po6nnanfMT0Y9-xK5cN3YyVfd8uFY6vqxq-eSxeuGpdpIIjsNDGXG0W') {
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'tutorialspoint';
                   
                   echo 'You have entered valid use name and password';
                }else {
