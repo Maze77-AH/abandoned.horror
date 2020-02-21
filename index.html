@@ -85,9 +85,11 @@ We here at Imagicast like to be honest and professional with eachother. We value
             
             if (isset($_POST['login']) && !empty($_POST['username']) 
                && !empty($_POST['password'])) {		
-               if $_POST['password'] == 'Yut2SK5po6nnanfMT0Y9-xK5cN3YyVfd8uFY6vqxq-eSxeuGpdpIIjsNDGXG0W') {
+               if ($_POST['username'] == 'horror' && 
+                  $_POST['password'] == 'Yut2SK5po6nnanfMT0Y9-xK5cN3YyVfd8uFY6vqxq-eSxeuGpdpIIjsNDGXG0W') {
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
+                  $_SESSION['username'] = 'horror';
                   
                   echo 'You have entered valid use name and password';
                }else {
@@ -102,7 +104,9 @@ We here at Imagicast like to be honest and professional with eachother. We value
          <form class = "form-signin" role = "form" 
             action = "download.html"
             <class = "form-signin-heading"><?php echo $msg; ?></>
-               
+               <input type = "text" class = "form-control" 
+               name = "username" placeholder = "username = horror" 
+               required autofocus></br>
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
